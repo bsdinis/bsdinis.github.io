@@ -1,0 +1,5 @@
+{% extends "tera/base" %}
+
+{% block content %}
+    <h1> Publications </h1>
+{% endblock content %}

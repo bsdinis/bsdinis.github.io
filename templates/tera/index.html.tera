@@ -1,0 +1,6 @@
+{% extends "tera/base" %}
+
+{% block content %}
+    <h1> Baltasar Dinis </h1>
+    Welcome to my website, beware of the BS
+{% endblock content %}

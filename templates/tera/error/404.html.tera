@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>404 - bsdinis</title>
+  </head>
+  <body>
+      <h1>Page at {{ uri }} not found</h1>
+      Sorry :/
+  </body>
+</html>

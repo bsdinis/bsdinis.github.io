@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="generator" content=
+    "HTML Tidy for HTML5 for Linux version 5.8.0">
+    <meta charset="utf-8">
+    <title>bsdinis - {{ title }}</title>
+</head>
+<body>
+    {% include "tera/nav" %}
+    {% block content %}
+    {% endblock content %}
+    <footer>
+        <a href="/">Home</a>
+    </footer>
+</body>
+</html>
