@@ -3,9 +3,18 @@
 #[macro_use]
 extern crate rocket;
 
-use rocket::{fs::FileServer, http::Status, Request};
+use rocket::{
+    fs::{FileServer, NamedFile},
+    http::Status,
+    Request,
+};
 
 use rocket_dyn_templates::{context, Template};
+
+#[get("/style")]
+async fn style() -> Option<NamedFile> {
+    NamedFile::open("static/style.css").await.ok()
+}
 
 #[catch(404)]
 fn not_found(req: &Request) -> Template {
@@ -45,8 +54,11 @@ fn about() -> Template {
 }
 
 #[get("/<year>/<name>")]
-fn blogpost(year: usize, name: &str) -> String {
-    format!("placeholder for blogpost `{}` from `{}`", name, year)
+fn blogpost(year: usize, name: &str) -> Template {
+    Template::render(
+        format!("tera/blog/{}/{}", year, name),
+        context! { title: "blog" },
+    )
 }
 
 #[get("/")]
@@ -62,7 +74,7 @@ fn papers() -> Template {
 #[launch]
 fn rocket() -> _ {
     rocket::build()
-        .mount("/", routes![index, about])
+        .mount("/", routes![index, about, style])
         .mount("/blog", routes![blog, blogpost])
         .mount("/papers", routes![papers])
         .mount("/papers/pdf", FileServer::from("papers/pdf"))

@@ -1,4 +1,4 @@
-{% extends "tera/base" %}
+{% extends "tera/base2" %}
 
 {% block content %}
     <h1> Publications </h1>

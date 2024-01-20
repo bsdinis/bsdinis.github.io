@@ -1,7 +1,13 @@
-{% extends "tera/base" %}
+{% extends "tera/base2" %}
 
 {% block content %}
     <p>Hi, I'm Baltasar Dinis, a PhD student at the <a href=
     "https://pdos.csail.mit.edu">PDOS Lab</a> at MIT, based in
     Cambridge, <a href="https://dunkindonuts.com">MA</a>.</p>
+
+<div>
+div to the right TODO
+</div>
 {% endblock content %}
+
+

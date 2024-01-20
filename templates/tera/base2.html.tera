@@ -1,0 +1,12 @@
+{% extends "tera/base" %}
+
+{% block content %}
+<h1>{{ post_title }}</h1>
+
+{% block post %}
+{% endblock post %}
+{% endblock content %}
+
+{% block footer %}
+<a href="/">Home</a>
+{% endblock footer %}

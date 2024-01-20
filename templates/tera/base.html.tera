@@ -1,17 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="generator" content=
-    "HTML Tidy for HTML5 for Linux version 5.8.0">
+    <meta name="generator" content= "HTML Tidy for HTML5 for Linux version 5.8.0">
     <meta charset="utf-8">
+    <meta name="description" content="bsdinis' website">
+    <meta name="author" content="Baltasar Dinis">
+    {% if title %}
     <title>bsdinis - {{ title }}</title>
+    {% else %}
+    <title>bsdinis</title>
+    {% endif %}
+    <link rel="stylesheet" href="/style">
 </head>
 <body>
     {% include "tera/nav" %}
+    <!-- you see, i too can center a div -->
+    <div style="width: 80%;margin: auto; padding: 10px">
     {% block content %}
     {% endblock content %}
+    </div>
+
     <footer>
-        <a href="/">Home</a>
+        {% block footer %}
+        {% endblock footer %}
     </footer>
 </body>
 </html>

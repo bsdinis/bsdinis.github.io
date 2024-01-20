@@ -1,0 +1,9 @@
+{% extends "tera/blog/blogpost" %}
+
+{% block title %}
+Example
+{% endblock title %}
+
+{% block post %}
+This is a dummy blog post
+{% endblock post %}
