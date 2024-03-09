@@ -1,0 +1,9 @@
+{% extends "tera/base2" %}
+
+{% block content %}
+<p>The best way to get in touch with me is through my email (bsdinis at mit dot edu).</p>
+<p>I'm currently based in Cambridge, <a href="https://dunkindonuts.com">MA</a>.</p>
+
+<a href="https://github.com/bsdinis">[Github]</a><br>
+<a href="https://twitter.com/bsdinis">[Twitter]</a>
+{% endblock content %}

@@ -1,13 +1,22 @@
 {% extends "tera/base2" %}
 
 {% block content %}
-    <p>Hi, I'm Baltasar Dinis, a PhD student at the <a href=
-    "https://pdos.csail.mit.edu">PDOS Lab</a> at MIT, based in
-    Cambridge, <a href="https://dunkindonuts.com">MA</a>.</p>
+    <p>I'm currently a PhD student at the <a href="https://pdos.csail.mit.edu">PDOS</a>
+    group at MIT CSAIL, advised by Professor <a href="http://abelay.me">Adam Belay</a>.
 
-<div>
-div to the right TODO
-</div>
+    <p>I graduated with an Computer Science and Engineering MsC from
+    Instituto Superior Técnico (University of Lisbon),
+    where I was advised by Professor <a href="https://www.dpss.inesc-id.pt/~rodrigo/">Rodrigo Rodrigues</a>.</p>
+
+    <p>Previously I was:
+        <li>A research assistant at the Max Planck Institute for Software Systems in Saarbrücken,
+            Germany, where I worked under Professor <a href="https://people.mpi-sws.org/~druschel/">Peter Druschel</a>.
+        </li>
+        <li>A software engineering intern at <a href="https://singlestore.com">SingleStore</a>,
+            where I worked on an <a href="https://github.com/bsdinis/frodo">open-source tool</a>
+            to detect SQL isolation violations.
+        </li>
+        <li>A production network engineering intern at Facebook,
+            where I worked on safe network migration at scale</li>
+    </p>
 {% endblock content %}
-
-

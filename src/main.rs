@@ -1,4 +1,4 @@
-#![feature(error_generic_member_access)]
+// #![feature(error_generic_member_access)]
 
 #[macro_use]
 extern crate rocket;
@@ -53,6 +53,11 @@ fn about() -> Template {
     Template::render("tera/about", context! { title: "about" })
 }
 
+#[get("/contact")]
+fn contact() -> Template {
+    Template::render("tera/contact", context! { title: "contact" })
+}
+
 #[get("/<year>/<name>")]
 fn blogpost(year: usize, name: &str) -> Template {
     Template::render(
@@ -74,10 +79,11 @@ fn papers() -> Template {
 #[launch]
 fn rocket() -> _ {
     rocket::build()
-        .mount("/", routes![index, about, style])
+        .mount("/", routes![index, about, contact, style])
         .mount("/blog", routes![blog, blogpost])
         .mount("/papers", routes![papers])
         .mount("/papers/pdf", FileServer::from("papers/pdf"))
+        .mount("/papers/bibtex", FileServer::from("papers/bibtex"))
         .mount(
             "/papers/presentations",
             FileServer::from("papers/presentations"),
