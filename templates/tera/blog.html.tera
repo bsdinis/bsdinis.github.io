@@ -1,6 +1,0 @@
-{% extends "tera/base2" %}
-
-{% block content %}
-    <h1>bsdinis' Blog</h1>
-    Beware, rants may ensue
-{% endblock content %}
